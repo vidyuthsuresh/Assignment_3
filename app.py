@@ -129,7 +129,7 @@ heatmap_fig = px.imshow(
         "color": "Net Change (%)"
     },
     color_continuous_scale=granular_steps,
-    title = "Which Companies Experienced The Biggest Growth / Reduction from 2000 - 2025?"
+    title = "Which Companies Experienced The Biggest Growth / Reduction from 2000 - 2025? (Figure 2)"
 )
 
 heatmap_fig.update_layout(height=500)
@@ -159,7 +159,7 @@ layoff_bardata_fig = px.bar(
     x = "company",
     y = "layoffs",
     category_orders = {"company": layoff_company_order},
-    title = f"Which Companies Had The Most Layoffs in {year_selector}?  (Figure 2)",
+    title = f"Which Companies Had The Most Layoffs in {year_selector}?  (Figure 3)",
     labels = {
         "company": "Company",
         "layoffs": "Number of employees laid off"
@@ -180,7 +180,7 @@ hiring_bardata_fig = px.bar(
     x = "company",
     y = "hiring_rate_pct",
     category_orders = {"company": layoff_company_order},
-    title = f"Which Companies Had The Highest Hiring Rate in {year_selector}?  (Figure 3)",
+    title = f"Which Companies Had The Highest Hiring Rate in {year_selector}?  (Figure 4)",
     labels = {
         "company": "Company",
         "hiring_rate_pct": "Hiring Rate (%)"
@@ -211,7 +211,7 @@ metric_scatterplot_fig = px.scatter(
         "layoffs",
         "attrition_rate_pct"
     ],
-    title = "Company Stock Performance vs Workforce Growth?  (Figure 4)",
+    title = "Company Stock Performance vs Workforce Growth?  (Figure 5)",
     labels = {
         "stock_price_change_pct": "Year over Year Stock Price Change (%)",
         "net_change_pct": "Net Change in Employee Headcount (%)"
@@ -244,7 +244,7 @@ boxplot_fig = px.box(
     hiring_bardata_df,
     x = "company",
     y = "attrition_rate_pct",
-    title = "Which Companies Had The Most Unstable Attrition Rates  (Figure 5)",
+    title = "Which Companies Had The Most Unstable Attrition Rates  (Figure 6)",
     labels = {
         "company": "Company",
         "attrition_rate_pct": "Attrition Rate (%)"
