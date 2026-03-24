@@ -114,11 +114,11 @@ st.plotly_chart(gdp_line_fig)
 heatmap_data = chart_data_df.pivot_table(index = "company", columns = "year", values = "net_change_pct", aggfunc = "mean")
 
 granular_steps = [
-        [0.0, "#1a9850"],
-        [0.05, "#a6d96a"],
+        [0.0, "#b2182b"],
+        [0.05, "#f4a582"],
         [0.2, "#ffffff"],
-        [0.35, "#f4a582"],
-        [1.0, "#b2182b"]
+        [0.35, "#a6d96a"],
+        [1.0, "#1a9850"]
     ]
 
 heatmap_fig = px.imshow(
