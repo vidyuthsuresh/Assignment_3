@@ -198,7 +198,7 @@ st.plotly_chart(hiring_bardata_fig, use_container_width=True)
 # Chart 3
 # Purpose: To show the relationship of how a company's stock performance influences
 # their headcount
-metric_scatterplot_df = chart_data_df
+metric_scatterplot_df = chart_data_df[chart_data_df["year"] == year_selector]
 
 metric_scatterplot_fig = px.scatter(
     metric_scatterplot_df,
@@ -206,12 +206,11 @@ metric_scatterplot_fig = px.scatter(
     y = "net_change_pct",
     color = "company",
     hover_data = [
-        "year",
         "new_hires",
         "layoffs",
         "attrition_rate_pct"
     ],
-    title = "Company Stock Performance vs Workforce Growth?  (Figure 5)",
+    title = f"Company Stock Performance vs Workforce Growth in {year_selector} (Figure 5)",
     labels = {
         "stock_price_change_pct": "Year over Year Stock Price Change (%)",
         "net_change_pct": "Net Change in Employee Headcount (%)"
